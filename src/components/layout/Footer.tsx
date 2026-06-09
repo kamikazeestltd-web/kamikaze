@@ -9,8 +9,8 @@ export default function Footer() {
             KAMIKAZE
           </p>
           <p className="text-[11px] text-white/30 leading-relaxed max-w-xs tracking-wide">
-            Built To Leave A Mark.
-            <br />Premium streetwear from Malaysia.
+            Luxury streetwear for the disciplined rebel.
+            <br />Japanese-inspired. Malaysia-made.
           </p>
           <div className="flex gap-4 mt-6">
             {["IG", "TT", "TW"].map((s) => (

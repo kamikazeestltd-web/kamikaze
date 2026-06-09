@@ -17,7 +17,7 @@ export default function EmailCapture() {
     return (
       <div className="text-center py-8">
         <p className="text-xs tracking-[0.4em] uppercase text-white/40 mb-3">You&apos;re In.</p>
-        <p className="text-2xl font-black uppercase tracking-tighter">Welcome To The Movement.</p>
+        <p className="text-2xl font-black uppercase tracking-tighter">Welcome To The Order.</p>
       </div>
     );
   }
@@ -41,9 +41,9 @@ export default function EmailCapture() {
       />
       <button
         type="submit"
-        className="w-full bg-white text-black py-4 text-xs tracking-[0.3em] uppercase font-black hover:bg-white/90 transition-all duration-300"
+        className="w-full bg-red-600 text-white py-4 text-xs tracking-[0.3em] uppercase font-black hover:bg-red-700 transition-all duration-300"
       >
-        Join The Movement
+        Subscribe
       </button>
       <p className="text-[10px] text-white/20 tracking-wider text-center">
         No spam. Drops only.

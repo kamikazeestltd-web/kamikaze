@@ -18,9 +18,9 @@ export default function AboutPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-16 w-full">
           <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-4">Our Story</p>
           <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none">
-            Built Different.
+            Rebel With
             <br />
-            <span className="text-white/15">From Day One.</span>
+            <span className="text-red-600">Discipline.</span>
           </h1>
         </div>
       </section>
@@ -28,14 +28,13 @@ export default function AboutPage() {
       {/* Manifesto */}
       <section className="max-w-3xl mx-auto px-6 py-24 space-y-8">
         <p className="text-lg text-white/70 leading-relaxed font-light">
-          KAMIKAZE was created for people who attack life without hesitation.
+          KAMIKAZE is inspired by the Japanese spirit of commitment. Not recklessness — discipline. Not chaos — precision.
         </p>
         <p className="text-lg text-white/40 leading-relaxed">
-          Every piece is designed to represent ambition, discipline, and the
-          willingness to leave a mark on the world.
+          We make luxury streetwear for people who rebel against mediocrity. Every piece is a statement. Every thread has purpose.
         </p>
-        <p className="text-xl text-white font-black tracking-wide uppercase">
-          This is not fashion. This is a statement.
+        <p className="text-xl text-white font-black tracking-wide uppercase border-l-4 border-red-600 pl-6">
+          Discipline is the rebellion.
         </p>
       </section>
 

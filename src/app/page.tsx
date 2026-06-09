@@ -24,31 +24,21 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-          <p className="text-[10px] tracking-[0.5em] uppercase text-white/40 mb-8">
-            Malaysia — Est. 2024
-          </p>
+          <div className="mb-8 text-7xl md:text-8xl tracking-[0.3em]">神風</div>
           <h1 className="text-[clamp(3rem,10vw,8rem)] font-black tracking-tighter leading-none mb-6 uppercase">
-            Built To Leave
+            Rebel With
             <br />
-            <span className="text-white/20">A Mark.</span>
+            <span className="text-red-600">Discipline</span>
           </h1>
           <p className="text-white/40 text-sm tracking-[0.2em] uppercase mb-12 max-w-sm mx-auto">
-            KAMIKAZE is for those who refuse to live unnoticed.
+            Japanese-Inspired Luxury Streetwear
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/shop"
-              className="bg-white text-black px-10 py-4 text-xs tracking-[0.3em] uppercase font-black hover:bg-white/90 transition-all duration-300 min-w-[180px]"
-            >
-              Shop Collection
-            </Link>
-            <Link
-              href="#movement"
-              className="border border-white/20 px-10 py-4 text-xs tracking-[0.3em] uppercase font-bold hover:border-white/60 hover:text-white transition-all duration-300 min-w-[180px] text-white/60"
-            >
-              Join The Movement
-            </Link>
-          </div>
+          <Link
+            href="/shop"
+            className="inline-block border-2 border-red-600 text-red-600 px-12 py-4 text-xs tracking-[0.3em] uppercase font-black hover:bg-red-600 hover:text-black transition-all duration-300"
+          >
+            Enter The Vision
+          </Link>
         </div>
 
         {/* Scroll indicator */}
@@ -61,7 +51,7 @@ export default function HomePage() {
       {/* ── MARQUEE ── */}
       <div className="border-y border-white/5 py-4 overflow-hidden bg-black">
         <div className="flex animate-marquee whitespace-nowrap">
-          {Array(8).fill("BUILT TO LEAVE A MARK · KAMIKAZE · PREMIUM STREETWEAR · MALAYSIA · ").map((text, i) => (
+          {Array(8).fill("KAMIKAZE 神風 · REBEL WITH DISCIPLINE · LUXURY STREETWEAR · MALAYSIA · ").map((text, i) => (
             <span key={i} className="text-[10px] tracking-[0.4em] uppercase text-white/15 mr-0">
               {text}
             </span>
@@ -74,10 +64,10 @@ export default function HomePage() {
         <div className="flex items-end justify-between mb-16">
           <div>
             <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-3">
-              SS26 Collection
+              Now Available
             </p>
             <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter">
-              The Drop
+              Vision Collection
             </h2>
           </div>
           <Link
@@ -108,12 +98,12 @@ export default function HomePage() {
           </div>
           <div>
             <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-6">
-              Why KAMIKAZE?
+              Our Philosophy
             </p>
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-none mb-10">
-              Not Fashion.
+            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-none mb-10 pb-6 border-b-2 border-red-600">
+              The Kamikaze
               <br />
-              <span className="text-white/20">A Statement.</span>
+              <span className="text-white/60">Philosophy</span>
             </h2>
             <div className="space-y-6 text-white/50 text-sm leading-relaxed">
               <p>
@@ -226,14 +216,14 @@ export default function HomePage() {
       <section className="border-t border-white/5 py-32 px-6 bg-black">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-4">
-            Be First
+            Become A Member
           </p>
           <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4">
-            Join Before
-            <br />The Next Drop.
+            Join The
+            <br />Order
           </h2>
           <p className="text-white/30 text-sm mb-12">
-            Early access. Exclusive discounts. Limited releases. No noise.
+            Early access. Exclusive drops. Community first. Discipline always.
           </p>
           <EmailCapture />
         </div>
