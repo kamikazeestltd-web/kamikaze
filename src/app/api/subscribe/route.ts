@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
 
   const resend = new Resend(process.env.RESEND_API_KEY);
 
-  await resend.emails.send({
+  const { data, error } = await resend.emails.send({
     from: "Kamikaze <onboarding@resend.dev>",
     to: email,
     subject: "You're In The Order — KAMIKAZE",
@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
                       Early drops, exclusive access, and the movement — delivered to you first.
                     </p>
 
-                    <a href="https://kamikaze-three.vercel.app/shop"
+                    <a href="${process.env.NEXT_PUBLIC_SITE_URL}/shop"
                       style="display:inline-block; border:2px solid #cc0000; color:#cc0000; padding:16px 40px; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; font-weight:900; text-decoration:none;">
                       Enter The Vision
                     </a>
@@ -72,5 +72,11 @@ export async function POST(req: NextRequest) {
     `,
   });
 
+  if (error) {
+    console.error("Resend error:", error);
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
+
+  console.log("Welcome email sent:", data?.id, "to:", email);
   return NextResponse.json({ success: true });
 }
