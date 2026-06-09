@@ -41,7 +41,7 @@ export async function sendOrderConfirmation({
     .join("");
 
   await resend.emails.send({
-    from: "Kamikaze <orders@kamikazebrand.com>",
+    from: "Kamikaze <onboarding@resend.dev>",
     to,
     subject: `Order Confirmed — #${orderId.slice(-8).toUpperCase()}`,
     html: `
