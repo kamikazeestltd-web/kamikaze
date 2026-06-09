@@ -2,136 +2,286 @@ import Link from "next/link";
 import Image from "next/image";
 import { getFeaturedProducts } from "@/lib/products";
 import ProductCard from "@/components/shop/ProductCard";
+import EmailCapture from "@/components/ui/EmailCapture";
 
 export default function HomePage() {
   const featured = getFeaturedProducts();
 
   return (
-    <div>
-      {/* Hero */}
-      <section className="relative h-[92vh] flex items-center justify-center overflow-hidden">
+    <div className="bg-black text-white">
+
+      {/* ── HERO ── */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1600&q=80"
-            alt="Kamikaze hero"
+            src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=1920&q=90"
+            alt="KAMIKAZE"
             fill
-            className="object-cover opacity-40"
+            className="object-cover opacity-30 animate-slow-zoom"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[var(--background)]/20 via-transparent to-[var(--background)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black" />
         </div>
 
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <p className="text-xs tracking-[0.4em] uppercase text-[var(--accent)] mb-6">
-            New Collection — SS26
+        <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+          <p className="text-[10px] tracking-[0.5em] uppercase text-white/40 mb-8">
+            Malaysia — Est. 2024
           </p>
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tight leading-none mb-8 uppercase">
-            Move With
+          <h1 className="text-[clamp(3rem,10vw,8rem)] font-black tracking-tighter leading-none mb-6 uppercase">
+            Built To Leave
             <br />
-            Intent.
+            <span className="text-white/20">A Mark.</span>
           </h1>
-          <p className="text-[var(--foreground)]/60 text-lg mb-10 max-w-md mx-auto">
-            Premium streetwear built for those who refuse to blend in.
+          <p className="text-white/40 text-sm tracking-[0.2em] uppercase mb-12 max-w-sm mx-auto">
+            KAMIKAZE is for those who refuse to live unnoticed.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="/shop"
-              className="bg-[var(--foreground)] text-[var(--background)] px-10 py-4 text-sm tracking-widest uppercase font-semibold hover:bg-[var(--accent)] transition-colors"
+              className="bg-white text-black px-10 py-4 text-xs tracking-[0.3em] uppercase font-black hover:bg-white/90 transition-all duration-300 min-w-[180px]"
             >
-              Shop Now
+              Shop Collection
             </Link>
             <Link
-              href="/about"
-              className="border border-[var(--foreground)]/30 px-10 py-4 text-sm tracking-widest uppercase hover:border-[var(--foreground)] transition-colors"
+              href="#movement"
+              className="border border-white/20 px-10 py-4 text-xs tracking-[0.3em] uppercase font-bold hover:border-white/60 hover:text-white transition-all duration-300 min-w-[180px] text-white/60"
             >
-              Our Story
+              Join The Movement
             </Link>
           </div>
         </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/20">
+          <span className="text-[9px] tracking-[0.4em] uppercase">Scroll</span>
+          <div className="w-px h-12 bg-gradient-to-b from-white/20 to-transparent" />
+        </div>
       </section>
 
-      {/* Featured Products */}
+      {/* ── MARQUEE ── */}
+      <div className="border-y border-white/5 py-4 overflow-hidden bg-black">
+        <div className="flex animate-marquee whitespace-nowrap">
+          {Array(8).fill("BUILT TO LEAVE A MARK · KAMIKAZE · PREMIUM STREETWEAR · MALAYSIA · ").map((text, i) => (
+            <span key={i} className="text-[10px] tracking-[0.4em] uppercase text-white/15 mr-0">
+              {text}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* ── FEATURED COLLECTION ── */}
       <section className="max-w-7xl mx-auto px-6 py-24">
-        <div className="flex items-end justify-between mb-12">
+        <div className="flex items-end justify-between mb-16">
           <div>
-            <p className="text-xs tracking-[0.4em] uppercase text-[var(--accent)] mb-2">
-              Featured
+            <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-3">
+              SS26 Collection
             </p>
-            <h2 className="text-3xl font-bold uppercase tracking-tight">
-              The Collection
+            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter">
+              The Drop
             </h2>
           </div>
           <Link
             href="/shop"
-            className="text-sm tracking-widest uppercase text-[var(--foreground)]/50 hover:text-[var(--foreground)] transition-colors"
+            className="text-[10px] tracking-[0.3em] uppercase text-white/30 hover:text-white transition-colors border-b border-white/10 hover:border-white/40 pb-1"
           >
-            View All →
+            View All
           </Link>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {featured.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </section>
 
-      {/* Brand statement */}
-      <section className="border-y border-[var(--border)] py-24 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-3xl md:text-4xl font-bold leading-tight tracking-tight">
-            &ldquo;We don&apos;t follow trends.
-            <br />
-            <span className="text-[var(--accent)]">We set the standard.</span>
-            &rdquo;
-          </p>
-          <p className="mt-6 text-[var(--foreground)]/50 text-sm tracking-widest uppercase">
-            — Kamikaze, Est. 2024
-          </p>
+      {/* ── BRAND STORY ── */}
+      <section className="border-t border-white/5 py-32 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="relative aspect-[4/5] overflow-hidden">
+            <Image
+              src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=900&q=80"
+              alt="Why KAMIKAZE"
+              fill
+              className="object-cover grayscale"
+            />
+            <div className="absolute inset-0 bg-black/30" />
+          </div>
+          <div>
+            <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-6">
+              Why KAMIKAZE?
+            </p>
+            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-none mb-10">
+              Not Fashion.
+              <br />
+              <span className="text-white/20">A Statement.</span>
+            </h2>
+            <div className="space-y-6 text-white/50 text-sm leading-relaxed">
+              <p>
+                KAMIKAZE was created for people who attack life without hesitation.
+              </p>
+              <p>
+                Every piece is designed to represent ambition, discipline, and
+                the willingness to leave a mark on the world.
+              </p>
+              <p className="text-white font-semibold tracking-wide">
+                This is not fashion. This is a statement.
+              </p>
+            </div>
+            <Link
+              href="/about"
+              className="inline-block mt-10 text-[10px] tracking-[0.3em] uppercase border-b border-white/20 hover:border-white pb-1 text-white/50 hover:text-white transition-all"
+            >
+              Our Story →
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Category blocks */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* ── STATS / CREDIBILITY ── */}
+      <section className="border-t border-white/5 py-20 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            {
-              label: "Tops & Hoodies",
-              image:
-                "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=800&q=80",
-              category: "Tops",
-            },
-            {
-              label: "Outerwear",
-              image:
-                "https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=800&q=80",
-              category: "Outerwear",
-            },
-          ].map((cat) => (
-            <Link
-              key={cat.category}
-              href={`/shop?category=${cat.category}`}
-              className="relative h-80 overflow-hidden group"
-            >
-              <Image
-                src={cat.image}
-                alt={cat.label}
-                fill
-                className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-500"
-              />
-              <div className="absolute inset-0 flex items-end p-8">
-                <div>
-                  <h3 className="text-2xl font-bold uppercase tracking-tight">
-                    {cat.label}
-                  </h3>
-                  <p className="text-sm tracking-widest uppercase text-[var(--accent)] mt-1">
-                    Shop →
-                  </p>
-                </div>
-              </div>
-            </Link>
+            { value: "2024", label: "Founded" },
+            { value: "MY", label: "Origin" },
+            { value: "100%", label: "Premium Quality" },
+            { value: "∞", label: "Ambition" },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center">
+              <p className="text-3xl md:text-4xl font-black tracking-tight mb-2">
+                {stat.value}
+              </p>
+              <p className="text-[10px] tracking-[0.3em] uppercase text-white/30">
+                {stat.label}
+              </p>
+            </div>
           ))}
         </div>
       </section>
+
+      {/* ── COMMUNITY / MOVEMENT ── */}
+      <section id="movement" className="border-t border-white/5 py-32 px-6 bg-white text-black">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-[10px] tracking-[0.4em] uppercase text-black/30 mb-4">
+              More Than A Brand
+            </p>
+            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">
+              The Movement
+            </h2>
+            <p className="mt-6 text-black/40 text-sm max-w-md mx-auto leading-relaxed">
+              KAMIKAZE is a community of builders, dreamers, and doers. Every
+              piece you wear is a signal to the world.
+            </p>
+          </div>
+
+          {/* Community grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-16">
+            {[
+              "https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=400&q=80",
+              "https://images.unsplash.com/photo-1588117305388-c2631a279f82?w=400&q=80",
+              "https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=400&q=80",
+              "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=400&q=80",
+            ].map((img, i) => (
+              <div key={i} className="relative aspect-square overflow-hidden">
+                <Image
+                  src={img}
+                  alt="KAMIKAZE community"
+                  fill
+                  className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Testimonials */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                quote: "KAMIKAZE hits different. It&apos;s not just clothing — it&apos;s a mindset.",
+                name: "Amir R.",
+                title: "Entrepreneur, KL",
+              },
+              {
+                quote: "Finally a local brand that actually looks premium. Every piece is fire.",
+                name: "Haziq M.",
+                title: "Content Creator, Selangor",
+              },
+              {
+                quote: "I wear KAMIKAZE to remind myself what I&apos;m building towards.",
+                name: "Faris A.",
+                title: "Athlete, Penang",
+              },
+            ].map((t) => (
+              <div key={t.name} className="border border-black/10 p-8">
+                <p className="text-sm leading-relaxed text-black/60 mb-6">&ldquo;{t.quote}&rdquo;</p>
+                <p className="text-xs font-black tracking-widest uppercase">{t.name}</p>
+                <p className="text-[10px] tracking-widest uppercase text-black/30 mt-1">{t.title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── EMAIL CAPTURE ── */}
+      <section className="border-t border-white/5 py-32 px-6 bg-black">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-4">
+            Be First
+          </p>
+          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4">
+            Join Before
+            <br />The Next Drop.
+          </h2>
+          <p className="text-white/30 text-sm mb-12">
+            Early access. Exclusive discounts. Limited releases. No noise.
+          </p>
+          <EmailCapture />
+        </div>
+      </section>
+
+      {/* ── CATEGORY SPLIT ── */}
+      <section className="grid grid-cols-1 md:grid-cols-2">
+        {[
+          {
+            label: "New Arrivals",
+            sub: "SS26",
+            image: "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=900&q=80",
+            href: "/shop",
+          },
+          {
+            label: "Best Sellers",
+            sub: "All Time",
+            image: "https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=900&q=80",
+            href: "/shop",
+          },
+        ].map((cat) => (
+          <Link
+            key={cat.label}
+            href={cat.href}
+            className="relative h-[60vh] overflow-hidden group"
+          >
+            <Image
+              src={cat.image}
+              alt={cat.label}
+              fill
+              className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-60"
+            />
+            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500" />
+            <div className="absolute inset-0 flex flex-col items-center justify-center">
+              <p className="text-[10px] tracking-[0.4em] uppercase text-white/40 mb-3">
+                {cat.sub}
+              </p>
+              <h3 className="text-3xl font-black uppercase tracking-tighter text-white">
+                {cat.label}
+              </h3>
+              <span className="mt-4 text-[10px] tracking-[0.3em] uppercase text-white/40 border-b border-white/20 pb-1">
+                Shop Now
+              </span>
+            </div>
+          </Link>
+        ))}
+      </section>
+
     </div>
   );
 }
