@@ -68,7 +68,7 @@ export default function CartPage() {
                     </p>
                   </div>
                   <p className="text-[var(--accent)] font-semibold">
-                    ${item.product.price * item.quantity}
+                    RM${item.product.price * item.quantity}
                   </p>
                 </div>
                 <div className="flex items-center justify-between mt-4">
@@ -120,7 +120,7 @@ export default function CartPage() {
           </h2>
           <div className="flex justify-between text-sm mb-3">
             <span className="text-[var(--foreground)]/60">Subtotal</span>
-            <span>${total()}</span>
+            <span>RM${total()}</span>
           </div>
           <div className="flex justify-between text-sm mb-3">
             <span className="text-[var(--foreground)]/60">Shipping</span>
@@ -128,7 +128,7 @@ export default function CartPage() {
           </div>
           <div className="border-t border-[var(--border)] mt-6 pt-6 flex justify-between font-semibold">
             <span>Total</span>
-            <span className="text-[var(--accent)]">${total()}</span>
+            <span className="text-[var(--accent)]">RM${total()}</span>
           </div>
           <Link
             href="/checkout"

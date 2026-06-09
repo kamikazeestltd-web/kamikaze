@@ -81,14 +81,14 @@ export default function CheckoutPage() {
                   </p>
                 </div>
                 <p className="text-sm text-[var(--accent)] font-semibold">
-                  ${item.product.price * item.quantity}
+                  RM${item.product.price * item.quantity}
                 </p>
               </div>
             </div>
           ))}
           <div className="flex justify-between text-lg font-bold pt-2">
             <span>Total</span>
-            <span className="text-[var(--accent)]">${total()}</span>
+            <span className="text-[var(--accent)]">RM${total()}</span>
           </div>
         </div>
 

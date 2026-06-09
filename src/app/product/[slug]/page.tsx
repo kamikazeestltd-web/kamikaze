@@ -83,7 +83,7 @@ export default function ProductPage({
             {product.name}
           </h1>
           <p className="text-2xl text-[var(--accent)] font-semibold mb-8">
-            ${product.price}
+            RM${product.price}
           </p>
 
           <p className="text-[var(--foreground)]/60 leading-relaxed mb-10">

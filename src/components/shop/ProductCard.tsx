@@ -31,7 +31,7 @@ export default function ProductCard({ product }: { product: Product }) {
           <h3 className="text-sm font-medium tracking-wide">{product.name}</h3>
         </div>
         <p className="text-sm text-[var(--accent)] font-semibold">
-          ${product.price}
+          RM${product.price}
         </p>
       </div>
     </Link>
