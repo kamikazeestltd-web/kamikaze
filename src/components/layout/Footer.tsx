@@ -43,11 +43,10 @@ export default function Footer() {
           <ul className="space-y-3">
             {[
               { label: "About", href: "/about" },
-              { label: "Movement", href: "/#movement" },
-              { label: "FAQ", href: "#" },
-              { label: "Shipping", href: "#" },
-              { label: "Returns", href: "#" },
-              { label: "Contact", href: "#" },
+              { label: "Size Guide", href: "/size-guide" },
+              { label: "Shipping & Returns", href: "/shipping" },
+              { label: "FAQ", href: "/contact" },
+              { label: "Contact", href: "/contact" },
             ].map((l) => (
               <li key={l.label}>
                 <Link href={l.href} className="text-[11px] tracking-wide text-white/30 hover:text-white transition-colors">

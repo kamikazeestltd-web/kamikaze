@@ -114,9 +114,9 @@ export default function ProductPage({
                 <p className="text-[10px] tracking-[0.3em] uppercase text-white/40">
                   Select Size
                 </p>
-                <button className="text-[10px] tracking-[0.2em] uppercase text-white/20 hover:text-white transition-colors underline">
+                <Link href="/size-guide" className="text-[10px] tracking-[0.2em] uppercase text-white/20 hover:text-white transition-colors underline">
                   Size Guide
-                </button>
+                </Link>
               </div>
               <div className="flex gap-2 flex-wrap">
                 {product.sizes.map((size) => (

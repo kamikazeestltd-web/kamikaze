@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 const links = [
   { href: "/shop", label: "Shop" },
   { href: "/about", label: "About" },
-  { href: "/#movement", label: "Movement" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
