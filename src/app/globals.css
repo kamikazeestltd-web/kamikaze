@@ -87,3 +87,25 @@ body {
 .animate-slow-zoom {
   animation: slowZoom 8s ease-in-out infinite alternate;
 }
+
+/* Hero distortion */
+.hero-distort {
+  filter: url(#distort);
+  animation: slowZoom 12s ease-in-out infinite alternate;
+}
+
+/* Red channel shift for glitch effect */
+.hero-distort-red {
+  filter: url(#distort) sepia(1) saturate(8) hue-rotate(310deg);
+  mix-blend-mode: screen;
+  transform: translate(4px, -2px);
+  animation: glitchShift 6s ease-in-out infinite;
+}
+
+@keyframes glitchShift {
+  0%, 90%, 100% { transform: translate(4px, -2px); opacity: 0.06; }
+  92%            { transform: translate(-6px, 2px); opacity: 0.12; }
+  94%            { transform: translate(8px, -1px); opacity: 0.08; }
+  96%            { transform: translate(-4px, 3px); opacity: 0.15; }
+  98%            { transform: translate(4px, -2px); opacity: 0.06; }
+}

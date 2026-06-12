@@ -12,15 +12,56 @@ export default function HomePage() {
 
       {/* ── HERO ── */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* SVG distortion filter */}
+        <svg className="absolute w-0 h-0">
+          <defs>
+            <filter id="distort">
+              <feTurbulence
+                type="turbulence"
+                baseFrequency="0.015 0.03"
+                numOctaves="3"
+                seed="5"
+                result="noise"
+              >
+                <animate
+                  attributeName="baseFrequency"
+                  values="0.015 0.03;0.02 0.04;0.01 0.02;0.015 0.03"
+                  dur="8s"
+                  repeatCount="indefinite"
+                />
+              </feTurbulence>
+              <feDisplacementMap
+                in="SourceGraphic"
+                in2="noise"
+                scale="18"
+                xChannelSelector="R"
+                yChannelSelector="G"
+              />
+            </filter>
+          </defs>
+        </svg>
+
         <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=1920&q=90"
-            alt="KAMIKAZE"
-            fill
-            className="object-cover opacity-30 animate-slow-zoom"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black" />
+          <div className="absolute inset-0 hero-distort">
+            <Image
+              src="/hero.jpg.jpeg"
+              alt="KAMIKAZE"
+              fill
+              className="object-cover object-top opacity-40 grayscale"
+              priority
+            />
+          </div>
+          {/* Red channel glitch overlay */}
+          <div className="absolute inset-0 hero-distort-red">
+            <Image
+              src="/hero.jpg.jpeg"
+              alt=""
+              fill
+              className="object-cover object-top opacity-[0.06] grayscale"
+              priority
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black" />
         </div>
 
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
