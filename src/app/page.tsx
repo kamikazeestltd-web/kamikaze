@@ -12,56 +12,50 @@ export default function HomePage() {
 
       {/* ── HERO ── */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* SVG distortion filter */}
-        <svg className="absolute w-0 h-0">
-          <defs>
-            <filter id="distort">
-              <feTurbulence
-                type="turbulence"
-                baseFrequency="0.015 0.03"
-                numOctaves="3"
-                seed="5"
-                result="noise"
-              >
-                <animate
-                  attributeName="baseFrequency"
-                  values="0.015 0.03;0.02 0.04;0.01 0.02;0.015 0.03"
-                  dur="8s"
-                  repeatCount="indefinite"
-                />
-              </feTurbulence>
-              <feDisplacementMap
-                in="SourceGraphic"
-                in2="noise"
-                scale="18"
-                xChannelSelector="R"
-                yChannelSelector="G"
-              />
-            </filter>
-          </defs>
-        </svg>
-
         <div className="absolute inset-0">
-          <div className="absolute inset-0 hero-distort">
+          {/* Base image */}
+          <div className="absolute inset-0">
             <Image
               src="/hero.jpg.jpeg"
               alt="KAMIKAZE"
               fill
-              className="object-cover object-top opacity-40 grayscale"
+              className="object-cover object-top opacity-45 grayscale"
               priority
             />
           </div>
-          {/* Red channel glitch overlay */}
-          <div className="absolute inset-0 hero-distort-red">
+          {/* Red channel layer */}
+          <div className="absolute inset-0 hero-glitch-red">
             <Image
               src="/hero.jpg.jpeg"
               alt=""
               fill
-              className="object-cover object-top opacity-[0.06] grayscale"
+              className="object-cover object-top grayscale"
               priority
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black" />
+          {/* Blue channel layer */}
+          <div className="absolute inset-0 hero-glitch-blue">
+            <Image
+              src="/hero.jpg.jpeg"
+              alt=""
+              fill
+              className="object-cover object-top grayscale"
+              priority
+            />
+          </div>
+          {/* Slice tear layer */}
+          <div className="absolute inset-0 hero-glitch-slice">
+            <Image
+              src="/hero.jpg.jpeg"
+              alt=""
+              fill
+              className="object-cover object-top opacity-50 grayscale"
+              priority
+            />
+          </div>
+          {/* Scanlines */}
+          <div className="absolute inset-0 hero-scanlines" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black" />
         </div>
 
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
