@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getFeaturedProducts } from "@/lib/products";
 import ProductCard from "@/components/shop/ProductCard";
 import EmailCapture from "@/components/ui/EmailCapture";
+import CountdownTimer from "@/components/ui/CountdownTimer";
 
 export default function HomePage() {
   const featured = getFeaturedProducts();
@@ -68,6 +69,15 @@ export default function HomePage() {
           <p className="text-white/40 text-sm tracking-[0.2em] uppercase mb-12 max-w-sm mx-auto">
             Japanese-Inspired Luxury Streetwear
           </p>
+
+          {/* Countdown */}
+          <div className="mb-12">
+            <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-6">
+              Launching In
+            </p>
+            <CountdownTimer />
+          </div>
+
           <Link
             href="/shop"
             className="inline-block border-2 border-red-600 text-red-600 px-12 py-4 text-xs tracking-[0.3em] uppercase font-black hover:bg-red-600 hover:text-black transition-all duration-300"
