@@ -98,70 +98,94 @@ export default function ProductPage({
               RM{product.price}
             </p>
 
-            {/* Low stock */}
-            <p className="text-[10px] tracking-[0.3em] uppercase text-white/30 mb-8 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block" />
-              In Stock — Ships in 2–4 business days
-            </p>
+            {/* Stock status */}
+            {product.soldOut ? (
+              <p className="text-[10px] tracking-[0.3em] uppercase text-red-400 mb-8 flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-red-500 inline-block" />
+                Sold Out
+              </p>
+            ) : (
+              <p className="text-[10px] tracking-[0.3em] uppercase text-white/30 mb-8 flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block" />
+                In Stock — Ships in 2–4 business days
+              </p>
+            )}
 
             <p className="text-sm text-white/40 leading-relaxed mb-10">
               {product.description}
             </p>
 
             {/* Size selector */}
-            <div className="mb-8">
-              <div className="flex justify-between items-center mb-4">
-                <p className="text-[10px] tracking-[0.3em] uppercase text-white/40">
-                  Select Size
-                </p>
-                <Link href="/size-guide" className="text-[10px] tracking-[0.2em] uppercase text-white/20 hover:text-white transition-colors underline">
-                  Size Guide
-                </Link>
+            {!product.soldOut && (
+              <div className="mb-8">
+                <div className="flex justify-between items-center mb-4">
+                  <p className="text-[10px] tracking-[0.3em] uppercase text-white/40">
+                    Select Size
+                  </p>
+                  <Link href="/size-guide" className="text-[10px] tracking-[0.2em] uppercase text-white/20 hover:text-white transition-colors underline">
+                    Size Guide
+                  </Link>
+                </div>
+                <div className="flex gap-2 flex-wrap">
+                  {product.sizes.map((size) => (
+                    <button
+                      key={size}
+                      onClick={() => setSelectedSize(size)}
+                      className={`w-12 h-12 text-xs font-bold border transition-all ${
+                        selectedSize === size
+                          ? "bg-white text-black border-white"
+                          : "border-white/10 text-white/40 hover:border-white/40 hover:text-white"
+                      }`}
+                    >
+                      {size}
+                    </button>
+                  ))}
+                </div>
+                {sizeError && (
+                  <p className="text-[10px] tracking-[0.2em] uppercase text-red-400 mt-3">
+                    Please select a size
+                  </p>
+                )}
               </div>
-              <div className="flex gap-2 flex-wrap">
-                {product.sizes.map((size) => (
-                  <button
-                    key={size}
-                    onClick={() => setSelectedSize(size)}
-                    className={`w-12 h-12 text-xs font-bold border transition-all ${
-                      selectedSize === size
-                        ? "bg-white text-black border-white"
-                        : "border-white/10 text-white/40 hover:border-white/40 hover:text-white"
-                    }`}
-                  >
-                    {size}
-                  </button>
-                ))}
-              </div>
-              {sizeError && (
-                <p className="text-[10px] tracking-[0.2em] uppercase text-red-400 mt-3">
-                  Please select a size
-                </p>
-              )}
-            </div>
+            )}
 
             {/* CTAs */}
-            <div className="space-y-3">
-              <button
-                onClick={handleAddToCart}
-                className={`w-full py-4 text-xs tracking-[0.3em] uppercase font-black transition-all duration-300 ${
-                  added
-                    ? "bg-white/20 text-white"
-                    : "bg-white text-black hover:bg-white/90"
-                }`}
-              >
-                {added ? "Added To Cart ✓" : "Add To Cart"}
-              </button>
-              <Link
-                href="/checkout"
-                onClick={() => {
-                  if (selectedSize) addItem(product, selectedSize);
-                }}
-                className="block w-full py-4 text-xs tracking-[0.3em] uppercase font-black border border-white/20 text-center hover:border-white/60 hover:text-white text-white/60 transition-all"
-              >
-                Buy Now
-              </Link>
-            </div>
+            {product.soldOut ? (
+              <div className="py-8 text-center border border-red-600/30">
+                <p className="text-sm font-black uppercase tracking-widest text-red-400">
+                  This item is sold out
+                </p>
+                <p className="text-xs text-white/40 mt-2">Join The Order to be notified when it's back in stock.</p>
+                <Link
+                  href="/"
+                  className="inline-block mt-6 text-[10px] tracking-[0.3em] uppercase border border-white/20 px-8 py-3 hover:border-white/60 text-white/60 hover:text-white transition-all"
+                >
+                  Browse Other Items
+                </Link>
+              </div>
+            ) : (
+              <div className="space-y-3">
+                <button
+                  onClick={handleAddToCart}
+                  className={`w-full py-4 text-xs tracking-[0.3em] uppercase font-black transition-all duration-300 ${
+                    added
+                      ? "bg-white/20 text-white"
+                      : "bg-white text-black hover:bg-white/90"
+                  }`}
+                >
+                  {added ? "Added To Cart ✓" : "Add To Cart"}
+                </button>
+                <Link
+                  href="/checkout"
+                  onClick={() => {
+                    if (selectedSize) addItem(product, selectedSize);
+                  }}
+                  className="block w-full py-4 text-xs tracking-[0.3em] uppercase font-black border border-white/20 text-center hover:border-white/60 hover:text-white text-white/60 transition-all"
+                >
+                  Buy Now
+                </Link>
+              </div>
+            )}
 
             {added && (
               <Link

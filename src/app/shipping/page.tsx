@@ -1,4 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Shipping & Returns — KAMIKAZE",
+  description: "KAMIKAZE shipping rates, delivery times, and returns policy. Free shipping on orders over RM200.",
+  keywords: ["shipping KAMIKAZE", "returns policy", "delivery times", "refunds"],
+};
 
 export default function ShippingPage() {
   return (

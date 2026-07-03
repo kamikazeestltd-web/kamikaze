@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Size Guide — KAMIKAZE",
+  description: "Find your perfect size. KAMIKAZE size guide with measurement tables for tops, bottoms, and how to measure yourself.",
+  keywords: ["size guide", "KAMIKAZE sizing", "clothing measurements", "how to measure"],
+};
+
 export default function SizeGuidePage() {
   const tops = [
     { size: "XS", chest: "84–88", shoulder: "42", length: "68" },

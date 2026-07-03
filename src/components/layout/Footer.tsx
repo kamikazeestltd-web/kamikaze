@@ -13,13 +13,18 @@ export default function Footer() {
             <br />Japanese-inspired. Malaysia-made.
           </p>
           <div className="flex gap-4 mt-6">
-            {["IG", "TT", "TW"].map((s) => (
+            {[
+              { label: "Instagram", href: "https://instagram.com/kamikaze.stw" },
+              { label: "TikTok", href: "https://tiktok.com/@kamikaze.stw" },
+            ].map((s) => (
               <a
-                key={s}
-                href="#"
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[10px] tracking-widest text-white/20 hover:text-white transition-colors"
               >
-                {s}
+                {s.label}
               </a>
             ))}
           </div>
@@ -60,11 +65,14 @@ export default function Footer() {
         <div>
           <p className="text-[9px] tracking-[0.4em] uppercase text-white/20 mb-5">Legal</p>
           <ul className="space-y-3">
-            {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((l) => (
-              <li key={l}>
-                <a href="#" className="text-[11px] tracking-wide text-white/30 hover:text-white transition-colors">
-                  {l}
-                </a>
+            {[
+              { label: "Privacy Policy", href: "/privacy" },
+              { label: "Terms of Service", href: "/terms" },
+            ].map((l) => (
+              <li key={l.label}>
+                <Link href={l.href} className="text-[11px] tracking-wide text-white/30 hover:text-white transition-colors">
+                  {l.label}
+                </Link>
               </li>
             ))}
           </ul>

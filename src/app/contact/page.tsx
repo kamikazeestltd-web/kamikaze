@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact & FAQ — KAMIKAZE",
+  description: "Got questions? Contact KAMIKAZE support or check our FAQ for shipping, returns, sizing, and ordering.",
+  keywords: ["contact KAMIKAZE", "FAQ", "shipping info", "returns policy", "customer support"],
+};
+
 export default function ContactPage() {
   const faqs = [
     {

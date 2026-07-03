@@ -8,6 +8,7 @@ export interface Product {
   sizes: string[];
   slug: string;
   featured?: boolean;
+  soldOut?: boolean;
 }
 
 export interface CartItem {

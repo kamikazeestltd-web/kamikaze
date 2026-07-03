@@ -1,5 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About — KAMIKAZE",
+  description: "Learn about KAMIKAZE's story, philosophy, and vision. Japanese-inspired luxury streetwear built in Malaysia for the disciplined rebel.",
+  keywords: ["about KAMIKAZE", "brand story", "streetwear philosophy", "Japanese streetwear"],
+};
 
 export default function AboutPage() {
   return (

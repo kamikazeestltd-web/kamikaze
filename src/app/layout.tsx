@@ -10,21 +10,22 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "KAMIKAZE — Built To Leave A Mark.",
+  title: "KAMIKAZE — Rebel With Discipline",
   description:
-    "KAMIKAZE is premium streetwear from Malaysia. Built for those who attack life without hesitation. Shop the collection.",
+    "Japanese-inspired luxury streetwear from Malaysia. KAMIKAZE is for the disciplined rebel. Shop premium streetwear, drops, and limited editions.",
   keywords: [
     "streetwear Malaysia",
-    "premium streetwear",
     "luxury streetwear",
-    "Malaysian clothing brand",
-    "oversized t-shirts Malaysia",
-    "KAMIKAZE clothing",
+    "Japanese streetwear",
+    "Malaysian fashion brand",
+    "premium clothing",
+    "KAMIKAZE",
+    "streetwear drops",
   ],
   openGraph: {
-    title: "KAMIKAZE — Built To Leave A Mark.",
+    title: "KAMIKAZE — Rebel With Discipline",
     description:
-      "Premium streetwear from Malaysia. For those who refuse to live unnoticed.",
+      "Japanese-inspired luxury streetwear from Malaysia. Discipline is the rebellion.",
     type: "website",
   },
 };
