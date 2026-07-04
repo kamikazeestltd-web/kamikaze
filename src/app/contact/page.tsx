@@ -82,8 +82,8 @@ export default function ContactPage() {
               <p className="text-[10px] tracking-[0.3em] uppercase text-white/20 mb-2">Social</p>
               <div className="flex gap-5 mt-1">
                 {[
-                  { label: "Instagram", href: "https://instagram.com/khons.stw" },
-                  { label: "TikTok", href: "https://instagram.com/khons.stw" },
+                  { label: "Instagram", href: "https://instagram.com/__khons__" },
+                  { label: "TikTok", href: "https://tiktok.com/@__khons__" },
                 ].map((s) => (
                   <a
                     key={s.label}
