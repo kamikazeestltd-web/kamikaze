@@ -1,78 +1,90 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import { getFeaturedProducts } from "@/lib/products";
 import ProductCard from "@/components/shop/ProductCard";
 import EmailCapture from "@/components/ui/EmailCapture";
 import CountdownTimer from "@/components/ui/CountdownTimer";
 
+export const metadata: Metadata = {
+  title: "KHONS — Rise. Rule. Return.",
+  description:
+    "KHONS is streetwear from the land of the two Niles. Named after Khonsu, the moon god who dies and returns every cycle. For those who refuse to stay buried.",
+  keywords: [
+    "KHONS streetwear",
+    "Egyptian streetwear",
+    "Nubian fashion",
+    "moon god",
+    "luxury streetwear",
+    "premium clothing",
+  ],
+};
+
 export default function HomePage() {
   const featured = getFeaturedProducts();
 
   return (
-    <div className="bg-black text-white">
-
+    <div className="bg-obsidian text-moon">
       {/* ── HERO ── */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Nile glow */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-gradient-to-r from-nile/30 to-transparent blur-3xl opacity-40" />
+
         <div className="absolute inset-0">
-          {/* Base image */}
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 hero-distort">
             <Image
               src="/hero.jpg.jpeg"
-              alt="KAMIKAZE"
+              alt="KHONS"
               fill
-              className="object-cover object-top opacity-45 grayscale"
+              className="object-cover object-top opacity-30"
               priority
             />
           </div>
-          {/* Red channel layer */}
           <div className="absolute inset-0 hero-glitch-red">
             <Image
               src="/hero.jpg.jpeg"
               alt=""
               fill
-              className="object-cover object-top grayscale"
+              className="object-cover object-top opacity-[0.06]"
               priority
             />
           </div>
-          {/* Blue channel layer */}
           <div className="absolute inset-0 hero-glitch-blue">
             <Image
               src="/hero.jpg.jpeg"
               alt=""
               fill
-              className="object-cover object-top grayscale"
+              className="object-cover object-top opacity-[0.06]"
               priority
             />
           </div>
-          {/* Slice tear layer */}
           <div className="absolute inset-0 hero-glitch-slice">
             <Image
               src="/hero.jpg.jpeg"
               alt=""
               fill
-              className="object-cover object-top opacity-50 grayscale"
+              className="object-cover object-top opacity-20"
               priority
             />
           </div>
-          {/* Scanlines */}
           <div className="absolute inset-0 hero-scanlines" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black" />
+          <div className="absolute inset-0 bg-gradient-to-b from-obsidian/50 via-obsidian/20 to-obsidian" />
         </div>
 
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-          <div className="mb-8 text-7xl md:text-8xl tracking-[0.3em]">神風</div>
-          <h1 className="text-[clamp(3rem,10vw,8rem)] font-black tracking-tighter leading-none mb-6 uppercase">
-            Rebel With
-            <br />
-            <span className="text-red-600">Discipline</span>
+          <p className="text-xs tracking-[0.4em] uppercase text-nile mb-8">
+            Streetwear from the land of the two Niles
+          </p>
+          <h1 className="text-[clamp(5rem,20vw,14rem)] font-black tracking-tight leading-none mb-6 uppercase text-moon">
+            KHONS
           </h1>
           <p className="text-white/40 text-sm tracking-[0.2em] uppercase mb-12 max-w-sm mx-auto">
-            Japanese-Inspired Luxury Streetwear
+            The moon always returns.
           </p>
 
           {/* Countdown */}
           <div className="mb-12">
-            <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-6">
+            <p className="text-[10px] tracking-[0.4em] uppercase text-moon-dim mb-6">
               Launching In
             </p>
             <CountdownTimer />
@@ -80,44 +92,112 @@ export default function HomePage() {
 
           <Link
             href="/shop"
-            className="inline-block border-2 border-red-600 text-red-600 px-12 py-4 text-xs tracking-[0.3em] uppercase font-black hover:bg-red-600 hover:text-black transition-all duration-300"
+            className="inline-block border-2 border-nile text-nile px-12 py-4 text-xs tracking-[0.3em] uppercase font-black hover:bg-nile hover:text-obsidian transition-all duration-300"
           >
-            Enter The Vision
+            Rise. Rule. Return.
           </Link>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/20">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-moon-faint">
           <span className="text-[9px] tracking-[0.4em] uppercase">Scroll</span>
-          <div className="w-px h-12 bg-gradient-to-b from-white/20 to-transparent" />
+          <div className="w-px h-12 bg-gradient-to-b from-nile to-transparent" />
         </div>
       </section>
 
       {/* ── MARQUEE ── */}
-      <div className="border-y border-white/5 py-4 overflow-hidden bg-black">
+      <div className="border-y border-line py-4 overflow-hidden bg-obsidian">
         <div className="flex animate-marquee whitespace-nowrap">
-          {Array(8).fill("KAMIKAZE 神風 · REBEL WITH DISCIPLINE · LUXURY STREETWEAR · MALAYSIA · ").map((text, i) => (
-            <span key={i} className="text-[10px] tracking-[0.4em] uppercase text-white/15 mr-0">
+          {Array(8).fill("KHONS · THE MOON ALWAYS RETURNS · RISE RULE RETURN · FROM THE TWO NILES · ").map((text, i) => (
+            <span key={i} className="text-[10px] tracking-[0.4em] uppercase text-moon-faint mr-0">
               {text}
             </span>
           ))}
         </div>
       </div>
 
+      {/* ── THREE FACES ── */}
+      <section className="max-w-7xl mx-auto px-6 py-24">
+        <div className="mb-16">
+          <p className="text-xs tracking-[0.4em] uppercase text-nile mb-4">
+            Three Faces. One God.
+          </p>
+          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-moon">
+            Rise. Rule. Return.
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 border border-line">
+          {[
+            {
+              num: "I",
+              title: "Rise",
+              aspect: "The Traveller",
+              desc: "He crosses the night sky without stopping — no light to guide him but his own. For the ones who keep moving through the dark when there's nothing yet to show for it.",
+              color: "text-nile",
+            },
+            {
+              num: "II",
+              title: "Rule",
+              aspect: "The Devourer",
+              desc: "In the oldest texts he strangles the old gods so the king may take their power. Defiance with teeth. You don't ask for the throne — you take what was always yours.",
+              color: "text-blood",
+            },
+            {
+              num: "III",
+              title: "Return",
+              aspect: "The Moon",
+              desc: "Devoured to nothing every cycle. Back to full every time. Impossible to keep buried. The whole brand in one law of the sky: the moon always returns.",
+              color: "text-gold",
+            },
+          ].map((face) => (
+            <div key={face.num} className="bg-night border border-line p-8 hover:bg-raised transition-colors duration-300">
+              <p className={`text-xs tracking-[0.3em] uppercase ${face.color} mb-3`}>
+                {face.num}
+              </p>
+              <h3 className="text-3xl font-black uppercase tracking-tight text-moon mb-2">
+                {face.title}
+              </h3>
+              <p className={`text-sm italic mb-4 ${face.color}`}>
+                {face.aspect}
+              </p>
+              <p className="text-sm text-moon-dim leading-relaxed">
+                {face.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── MANIFESTO ── */}
+      <section className="bg-night border-t border-line py-24 px-6">
+        <div className="max-w-2xl mx-auto text-center space-y-6">
+          <p className="text-base text-moon-dim leading-relaxed">
+            Every night the moon is <span className="text-moon italic">swallowed whole</span> — devoured down to nothing.
+          </p>
+          <p className="text-lg text-moon-dim leading-relaxed">
+            And every night it climbs back. Sharper. Fuller. <span className="text-nile italic">Impossible to kill.</span> The kingdom of Kush called that force <span className="text-moon font-bold">KHONSU</span> — the traveller who crosses the dark, the devourer who takes power from the gods, the moon that dies and returns without fail.
+          </p>
+          <p className="text-lg text-moon-dim leading-relaxed">
+            KHONS is cut for the ones built the same way. Buried, and back again. <span className="text-moon italic font-bold">This is not clothing. It is the mark of everyone who refused to stay in the dark.</span>
+          </p>
+        </div>
+      </section>
+
       {/* ── FEATURED COLLECTION ── */}
       <section className="max-w-7xl mx-auto px-6 py-24">
         <div className="flex items-end justify-between mb-16">
           <div>
-            <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-3">
+            <p className="text-xs tracking-[0.4em] uppercase text-nile mb-3">
               Now Available
             </p>
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter">
-              Vision Collection
+            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-moon">
+              The First Rising
             </h2>
           </div>
           <Link
             href="/shop"
-            className="text-[10px] tracking-[0.3em] uppercase text-white/30 hover:text-white transition-colors border-b border-white/10 hover:border-white/40 pb-1"
+            className="text-xs tracking-[0.3em] uppercase text-moon-dim hover:text-moon transition-colors border-b border-line hover:border-moon pb-1"
           >
             View All
           </Link>
@@ -129,165 +209,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── BRAND STORY ── */}
-      <section className="border-t border-white/5 py-32 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="relative aspect-[4/5] overflow-hidden">
-            <Image
-              src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=900&q=80"
-              alt="Why KAMIKAZE"
-              fill
-              className="object-cover grayscale"
-            />
-            <div className="absolute inset-0 bg-black/30" />
-          </div>
-          <div>
-            <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-6">
-              Our Philosophy
-            </p>
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-none mb-10 pb-6 border-b-2 border-red-600">
-              The Kamikaze
-              <br />
-              <span className="text-white/60">Philosophy</span>
-            </h2>
-            <div className="space-y-6 text-white/50 text-sm leading-relaxed">
-              <p>
-                KAMIKAZE was created for people who attack life without hesitation.
-              </p>
-              <p>
-                Every piece is designed to represent ambition, discipline, and
-                the willingness to leave a mark on the world.
-              </p>
-              <p className="text-white font-semibold tracking-wide">
-                This is not fashion. This is a statement.
-              </p>
-            </div>
-            <Link
-              href="/about"
-              className="inline-block mt-10 text-[10px] tracking-[0.3em] uppercase border-b border-white/20 hover:border-white pb-1 text-white/50 hover:text-white transition-all"
-            >
-              Our Story →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── STATS / CREDIBILITY ── */}
-      <section className="border-t border-white/5 py-20 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { value: "2024", label: "Founded" },
-            { value: "MY", label: "Origin" },
-            { value: "100%", label: "Premium Quality" },
-            { value: "∞", label: "Ambition" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p className="text-3xl md:text-4xl font-black tracking-tight mb-2">
-                {stat.value}
-              </p>
-              <p className="text-[10px] tracking-[0.3em] uppercase text-white/30">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── COMMUNITY / MOVEMENT ── */}
-      <section id="movement" className="border-t border-white/5 py-32 px-6 bg-white text-black">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-[10px] tracking-[0.4em] uppercase text-black/30 mb-4">
-              More Than A Brand
-            </p>
-            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">
-              The Movement
-            </h2>
-            <p className="mt-6 text-black/40 text-sm max-w-md mx-auto leading-relaxed">
-              KAMIKAZE is a community of builders, dreamers, and doers. Every
-              piece you wear is a signal to the world.
-            </p>
-          </div>
-
-          {/* Community grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-16">
-            {[
-              "https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=400&q=80",
-              "https://images.unsplash.com/photo-1588117305388-c2631a279f82?w=400&q=80",
-              "https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=400&q=80",
-              "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=400&q=80",
-            ].map((img, i) => (
-              <div key={i} className="relative aspect-square overflow-hidden">
-                <Image
-                  src={img}
-                  alt="KAMIKAZE community"
-                  fill
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Testimonials */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                quote: "KAMIKAZE hits different. It&apos;s not just clothing — it&apos;s a mindset.",
-                name: "Amir R.",
-                title: "Entrepreneur, KL",
-              },
-              {
-                quote: "Finally a local brand that actually looks premium. Every piece is fire.",
-                name: "Haziq M.",
-                title: "Content Creator, Selangor",
-              },
-              {
-                quote: "I wear KAMIKAZE to remind myself what I&apos;m building towards.",
-                name: "Faris A.",
-                title: "Athlete, Penang",
-              },
-            ].map((t) => (
-              <div key={t.name} className="border border-black/10 p-8">
-                <p className="text-sm leading-relaxed text-black/60 mb-6">&ldquo;{t.quote}&rdquo;</p>
-                <p className="text-xs font-black tracking-widest uppercase">{t.name}</p>
-                <p className="text-[10px] tracking-widest uppercase text-black/30 mt-1">{t.title}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── EMAIL CAPTURE ── */}
-      <section className="border-t border-white/5 py-32 px-6 bg-black">
+      <section className="border-t border-line py-32 px-6 bg-night">
         <div className="max-w-2xl mx-auto text-center">
-          <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-4">
-            Become A Member
+          <p className="text-xs tracking-[0.4em] uppercase text-nile mb-4">
+            Join The Cycle
           </p>
-          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4">
-            Join The
-            <br />Order
+          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-moon mb-4">
+            The Moon Returns
           </h2>
-          <p className="text-white/30 text-sm mb-12">
-            Early access. Exclusive drops. Community first. Discipline always.
+          <p className="text-moon-dim text-sm mb-12">
+            Early drops. Exclusive access. The movement. Delivered to you first.
           </p>
           <EmailCapture />
         </div>
       </section>
 
-      {/* ── CATEGORY SPLIT ── */}
+      {/* ── CATEGORIES ── */}
       <section className="grid grid-cols-1 md:grid-cols-2">
         {[
           {
-            label: "New Arrivals",
-            sub: "SS26",
-            image: "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=900&q=80",
-            href: "/shop",
+            label: "The Traveller",
+            sub: "Rise Collection",
+            image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=900&q=80",
+            href: "/shop?category=Tops",
           },
           {
-            label: "Best Sellers",
-            sub: "All Time",
+            label: "The Devourer",
+            sub: "Rule Collection",
             image: "https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=900&q=80",
-            href: "/shop",
+            href: "/shop?category=Bottoms",
           },
         ].map((cat) => (
           <Link
@@ -299,24 +250,23 @@ export default function HomePage() {
               src={cat.image}
               alt={cat.label}
               fill
-              className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-60"
+              className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-50"
             />
-            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500" />
+            <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all duration-500" />
             <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <p className="text-[10px] tracking-[0.4em] uppercase text-white/40 mb-3">
+              <p className="text-xs tracking-[0.4em] uppercase text-moon-dim mb-3">
                 {cat.sub}
               </p>
-              <h3 className="text-3xl font-black uppercase tracking-tighter text-white">
+              <h3 className="text-3xl font-black uppercase tracking-tight text-moon">
                 {cat.label}
               </h3>
-              <span className="mt-4 text-[10px] tracking-[0.3em] uppercase text-white/40 border-b border-white/20 pb-1">
+              <span className="mt-4 text-xs tracking-[0.3em] uppercase text-moon-dim border-b border-moon-dim pb-1">
                 Shop Now
               </span>
             </div>
           </Link>
         ))}
       </section>
-
     </div>
   );
 }

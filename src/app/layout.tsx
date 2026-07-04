@@ -10,22 +10,22 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "KAMIKAZE — Rebel With Discipline",
+  title: "KHONS — Rise. Rule. Return.",
   description:
-    "Japanese-inspired luxury streetwear from Malaysia. KAMIKAZE is for the disciplined rebel. Shop premium streetwear, drops, and limited editions.",
+    "KHONS is streetwear from the land of the two Niles. Named after Khonsu, the moon god who dies and returns every cycle. For those who refuse to stay buried.",
   keywords: [
-    "streetwear Malaysia",
+    "KHONS streetwear",
+    "Egyptian streetwear",
+    "Nubian fashion",
+    "moon god",
     "luxury streetwear",
-    "Japanese streetwear",
-    "Malaysian fashion brand",
     "premium clothing",
-    "KAMIKAZE",
-    "streetwear drops",
+    "African streetwear",
   ],
   openGraph: {
-    title: "KAMIKAZE — Rebel With Discipline",
+    title: "KHONS — Rise. Rule. Return.",
     description:
-      "Japanese-inspired luxury streetwear from Malaysia. Discipline is the rebellion.",
+      "Streetwear from the land of the two Niles. The moon always returns.",
     type: "website",
   },
 };
