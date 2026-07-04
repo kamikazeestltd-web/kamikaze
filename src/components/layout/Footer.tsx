@@ -6,23 +6,23 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-2 md:grid-cols-4 gap-12">
         <div className="col-span-2 md:col-span-1">
           <p className="text-lg font-black tracking-[0.25em] uppercase mb-4">
-            KAMIKAZE
+            KHONS
           </p>
-          <p className="text-[11px] text-white/30 leading-relaxed max-w-xs tracking-wide">
-            Luxury streetwear for the disciplined rebel.
-            <br />Japanese-inspired. Malaysia-made.
+          <p className="text-[11px] text-moon-dim leading-relaxed max-w-xs tracking-wide">
+            Streetwear from the land of the two Niles.
+            <br />The moon always returns.
           </p>
           <div className="flex gap-4 mt-6">
             {[
-              { label: "Instagram", href: "https://instagram.com/kamikaze.stw" },
-              { label: "TikTok", href: "https://tiktok.com/@kamikaze.stw" },
+              { label: "Instagram", href: "https://instagram.com/khons.stw" },
+              { label: "TikTok", href: "https://tiktok.com/@khons.stw" },
             ].map((s) => (
               <a
                 key={s.label}
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[10px] tracking-widest text-white/20 hover:text-white transition-colors"
+                className="text-[10px] tracking-widest text-moon-dim hover:text-moon transition-colors"
               >
                 {s.label}
               </a>

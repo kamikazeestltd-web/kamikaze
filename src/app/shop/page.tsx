@@ -2,6 +2,7 @@
 
 import { useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import type { Metadata } from "next";
 import { products } from "@/lib/products";
 import ProductCard from "@/components/shop/ProductCard";
 
@@ -31,12 +32,12 @@ function ShopContent() {
   }, [activeCategory, sort]);
 
   return (
-    <div className="bg-black text-white min-h-screen pt-16">
+    <div className="bg-obsidian text-moon min-h-screen pt-16">
       {/* Header */}
-      <div className="border-b border-white/5 px-6 py-16">
+      <div className="border-b border-line px-6 py-16">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-3">
-            SS26
+          <p className="text-xs tracking-[0.4em] uppercase text-nile mb-3">
+            The First Rising
           </p>
           <h1 className="text-5xl md:text-6xl font-black uppercase tracking-tighter">
             Shop
@@ -45,17 +46,17 @@ function ShopContent() {
       </div>
 
       {/* Filters */}
-      <div className="border-b border-white/5 px-6 py-4 sticky top-16 bg-black/95 backdrop-blur-md z-30">
+      <div className="border-b border-line px-6 py-4 sticky top-16 bg-obsidian/95 backdrop-blur-md z-30">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
           <div className="flex gap-2 flex-wrap">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 text-[10px] tracking-[0.2em] uppercase transition-colors ${
+                className={`px-4 py-2 text-xs tracking-[0.2em] uppercase transition-colors ${
                   activeCategory === cat
-                    ? "bg-white text-black font-black"
-                    : "text-white/30 hover:text-white border border-white/10 hover:border-white/30"
+                    ? "bg-nile text-obsidian font-black"
+                    : "text-moon-dim hover:text-moon border border-line hover:border-nile"
                 }`}
               >
                 {cat}
@@ -65,10 +66,10 @@ function ShopContent() {
           <select
             value={sort}
             onChange={(e) => setSort(e.target.value)}
-            className="bg-transparent border border-white/10 text-white/40 text-[10px] tracking-widest uppercase px-4 py-2 focus:outline-none hover:border-white/30 cursor-pointer"
+            className="bg-transparent border border-line text-moon-dim text-xs tracking-widest uppercase px-4 py-2 focus:outline-none hover:border-nile cursor-pointer"
           >
             {sortOptions.map((o) => (
-              <option key={o.value} value={o.value} className="bg-black">
+              <option key={o.value} value={o.value} className="bg-obsidian">
                 {o.label}
               </option>
             ))}
@@ -78,7 +79,7 @@ function ShopContent() {
 
       {/* Grid */}
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <p className="text-[10px] tracking-[0.3em] uppercase text-white/20 mb-8">
+        <p className="text-xs tracking-[0.3em] uppercase text-moon-dim mb-8">
           {filtered.length} Products
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -88,7 +89,7 @@ function ShopContent() {
         </div>
 
         {filtered.length === 0 && (
-          <p className="text-center text-white/20 py-24 text-[10px] tracking-[0.4em] uppercase">
+          <p className="text-center text-moon-dim py-24 text-xs tracking-[0.4em] uppercase">
             No products found
           </p>
         )}

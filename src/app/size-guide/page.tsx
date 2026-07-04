@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Size Guide — KAMIKAZE",
+  title: "Sizing — KHONS — KAMIKAZE",
   description: "Find your perfect size. KAMIKAZE size guide with measurement tables for tops, bottoms, and how to measure yourself.",
   keywords: ["size guide", "KAMIKAZE sizing", "clothing measurements", "how to measure"],
 };
@@ -36,7 +36,7 @@ export default function SizeGuidePage() {
         <div className="max-w-7xl mx-auto">
           <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-3">Fit Guide</p>
           <h1 className="text-5xl md:text-6xl font-black uppercase tracking-tighter">
-            Size Guide
+            Sizing — KHONS
           </h1>
         </div>
       </div>

@@ -40,7 +40,7 @@ export default function ProductPage({
   };
 
   return (
-    <div className="bg-black text-white pt-16 min-h-screen">
+    <div className="bg-obsidian text-moon pt-16 min-h-screen">
       <div className="max-w-7xl mx-auto px-6 py-12">
         {/* Breadcrumb */}
         <div className="flex items-center gap-3 mb-10 text-[10px] tracking-[0.3em] uppercase text-white/20">
@@ -64,7 +64,7 @@ export default function ProductPage({
               />
               {/* Limited drop badge */}
               <div className="absolute top-4 left-4">
-                <span className="text-[9px] tracking-[0.3em] uppercase bg-white text-black px-3 py-1 font-black">
+                <span className="text-[9px] tracking-[0.3em] uppercase bg-nile text-obsidian px-3 py-1 font-black">
                   Limited
                 </span>
               </div>
@@ -100,7 +100,7 @@ export default function ProductPage({
 
             {/* Stock status */}
             {product.soldOut ? (
-              <p className="text-[10px] tracking-[0.3em] uppercase text-red-400 mb-8 flex items-center gap-2">
+              <p className="text-[10px] tracking-[0.3em] uppercase text-blood mb-8 flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-red-500 inline-block" />
                 Sold Out
               </p>
@@ -133,7 +133,7 @@ export default function ProductPage({
                       onClick={() => setSelectedSize(size)}
                       className={`w-12 h-12 text-xs font-bold border transition-all ${
                         selectedSize === size
-                          ? "bg-white text-black border-white"
+                          ? "bg-nile text-obsidian border-white"
                           : "border-white/10 text-white/40 hover:border-white/40 hover:text-white"
                       }`}
                     >
@@ -142,7 +142,7 @@ export default function ProductPage({
                   ))}
                 </div>
                 {sizeError && (
-                  <p className="text-[10px] tracking-[0.2em] uppercase text-red-400 mt-3">
+                  <p className="text-[10px] tracking-[0.2em] uppercase text-blood mt-3">
                     Please select a size
                   </p>
                 )}
@@ -152,13 +152,13 @@ export default function ProductPage({
             {/* CTAs */}
             {product.soldOut ? (
               <div className="py-8 text-center border border-red-600/30">
-                <p className="text-sm font-black uppercase tracking-widest text-red-400">
+                <p className="text-sm font-black uppercase tracking-widest text-blood">
                   This item is sold out
                 </p>
                 <p className="text-xs text-white/40 mt-2">Join The Order to be notified when it's back in stock.</p>
                 <Link
                   href="/"
-                  className="inline-block mt-6 text-[10px] tracking-[0.3em] uppercase border border-white/20 px-8 py-3 hover:border-white/60 text-white/60 hover:text-white transition-all"
+                  className="inline-block mt-6 text-[10px] tracking-[0.3em] uppercase border border-line px-8 py-3 hover:border-white/60 text-moon-dim hover:text-white transition-all"
                 >
                   Browse Other Items
                 </Link>
@@ -170,7 +170,7 @@ export default function ProductPage({
                   className={`w-full py-4 text-xs tracking-[0.3em] uppercase font-black transition-all duration-300 ${
                     added
                       ? "bg-white/20 text-white"
-                      : "bg-white text-black hover:bg-white/90"
+                      : "bg-nile text-obsidian hover:bg-white/90"
                   }`}
                 >
                   {added ? "Added To Cart ✓" : "Add To Cart"}
@@ -180,7 +180,7 @@ export default function ProductPage({
                   onClick={() => {
                     if (selectedSize) addItem(product, selectedSize);
                   }}
-                  className="block w-full py-4 text-xs tracking-[0.3em] uppercase font-black border border-white/20 text-center hover:border-white/60 hover:text-white text-white/60 transition-all"
+                  className="block w-full py-4 text-xs tracking-[0.3em] uppercase font-black border border-line text-center hover:border-white/60 hover:text-white text-moon-dim transition-all"
                 >
                   Buy Now
                 </Link>

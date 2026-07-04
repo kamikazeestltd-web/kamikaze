@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — KAMIKAZE",
-  description: "KAMIKAZE privacy policy. Learn how we collect, use, and protect your personal data.",
-  keywords: ["privacy policy", "data protection", "KAMIKAZE"],
+  title: "Privacy Policy — KHONS",
+  description: "KHONS privacy policy. Learn how we collect, use, and protect your personal data.",
+  keywords: ["privacy policy", "data protection", "KHONS"],
 };
 
 export default function PrivacyPage() {
@@ -27,7 +27,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-lg font-black uppercase tracking-widest mb-4">1. Introduction</h2>
           <p className="text-white/40 leading-relaxed">
-            KAMIKAZE ("we," "us," "our," or "Company") operates the website kamikazeestltd.vercel.app.
+            KHONS ("we," "us," "our," or "Company") operates the website kamikazeestltd.vercel.app.
             This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
           </p>
         </section>
@@ -106,7 +106,7 @@ export default function PrivacyPage() {
           <h2 className="text-lg font-black uppercase tracking-widest mb-4">7. Data Retention</h2>
           <p className="text-white/40 leading-relaxed">
             We retain your personal data for as long as necessary to fulfill our legal obligations, resolve disputes,
-            and enforce our agreements. You can request deletion of your data by emailing support@kamikazebrand.com.
+            and enforce our agreements. You can request deletion of your data by emailing support@khons.brand.
           </p>
         </section>
 
@@ -114,7 +114,7 @@ export default function PrivacyPage() {
           <h2 className="text-lg font-black uppercase tracking-widest mb-4">8. Your Rights</h2>
           <p className="text-white/40 leading-relaxed">
             You have the right to access, correct, or delete your personal data. To exercise these rights,
-            contact us at support@kamikazebrand.com. We will respond within 30 days.
+            contact us at support@khons.brand. We will respond within 30 days.
           </p>
         </section>
 
@@ -129,7 +129,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-lg font-black uppercase tracking-widest mb-4">10. Contact Us</h2>
           <p className="text-white/40 leading-relaxed">
-            For privacy-related questions, email: support@kamikazebrand.com
+            For privacy-related questions, email: support@khons.brand
           </p>
         </section>
       </div>

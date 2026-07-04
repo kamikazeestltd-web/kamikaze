@@ -34,9 +34,9 @@ export default function EmailCapture() {
   if (submitted) {
     return (
       <div className="text-center py-8">
-        <p className="text-xs tracking-[0.4em] uppercase text-white/40 mb-3">You&apos;re In.</p>
-        <p className="text-2xl font-black uppercase tracking-tighter">Welcome To The Order.</p>
-        <p className="text-xs text-white/30 tracking-widest mt-4">Check your email.</p>
+        <p className="text-xs tracking-[0.4em] uppercase text-nile mb-3">The Moon Returns.</p>
+        <p className="text-2xl font-black uppercase tracking-tighter text-moon">You&apos;re In The Cycle.</p>
+        <p className="text-xs text-moon-dim tracking-widest mt-4">Check your email.</p>
       </div>
     );
   }
@@ -48,7 +48,7 @@ export default function EmailCapture() {
         placeholder="Your Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
-        className="w-full bg-transparent border border-white/10 px-5 py-4 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-white/40 tracking-wide transition-colors"
+        className="w-full bg-transparent border border-nile/20 px-5 py-4 text-sm text-moon placeholder:text-moon-faint focus:outline-none focus:border-nile/60 tracking-wide transition-colors"
       />
       <input
         type="email"
@@ -56,19 +56,19 @@ export default function EmailCapture() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-        className="w-full bg-transparent border border-white/10 px-5 py-4 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-white/40 tracking-wide transition-colors"
+        className="w-full bg-transparent border border-nile/20 px-5 py-4 text-sm text-moon placeholder:text-moon-faint focus:outline-none focus:border-nile/60 tracking-wide transition-colors"
       />
       {error && (
-        <p className="text-[10px] tracking-widest uppercase text-red-400">{error}</p>
+        <p className="text-[10px] tracking-widest uppercase text-blood">{error}</p>
       )}
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-red-600 text-white py-4 text-xs tracking-[0.3em] uppercase font-black hover:bg-red-700 transition-all duration-300 disabled:opacity-50"
+        className="w-full bg-nile text-obsidian py-4 text-xs tracking-[0.3em] uppercase font-black hover:bg-nile/90 transition-all duration-300 disabled:opacity-50"
       >
-        {loading ? "Joining..." : "Subscribe"}
+        {loading ? "Joining..." : "Join The Cycle"}
       </button>
-      <p className="text-[10px] text-white/20 tracking-wider text-center">
+      <p className="text-[10px] text-moon-faint tracking-wider text-center">
         No spam. Drops only.
       </p>
     </form>

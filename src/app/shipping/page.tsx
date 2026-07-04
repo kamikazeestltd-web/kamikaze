@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Shipping & Returns — KAMIKAZE",
+  title: "Shipping Shipping & Returns Returns — KHONS — KAMIKAZE",
   description: "KAMIKAZE shipping rates, delivery times, and returns policy. Free shipping on orders over RM200.",
   keywords: ["shipping KAMIKAZE", "returns policy", "delivery times", "refunds"],
 };
@@ -16,7 +16,7 @@ export default function ShippingPage() {
         <div className="max-w-7xl mx-auto">
           <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-3">Policies</p>
           <h1 className="text-5xl md:text-6xl font-black uppercase tracking-tighter">
-            Shipping & Returns
+            Shipping Shipping & Returns Returns — KHONS
           </h1>
         </div>
       </div>
@@ -79,7 +79,7 @@ export default function ShippingPage() {
               <h3 className="text-sm font-black uppercase tracking-widest mb-3">How To Return</h3>
               <ol className="space-y-3">
                 {[
-                  `Email support@kamikazebrand.com with your order number and reason for return.`,
+                  `Email support@khons.brand with your order number and reason for return.`,
                   `We will respond within 24–48 hours with a return authorisation and address.`,
                   `Pack the item securely and ship it back. Return shipping costs are covered by the customer.`,
                   `Once received and inspected, your refund will be processed within 5–7 business days to your original payment method.`,
@@ -127,8 +127,8 @@ export default function ShippingPage() {
           <p className="text-sm text-white/40 leading-relaxed mb-6">
             If you received the wrong item or something arrived damaged, we sincerely apologise.
             Email us at{" "}
-            <a href="mailto:support@kamikazebrand.com" className="text-white hover:text-white/70 transition-colors">
-              support@kamikazebrand.com
+            <a href="mailto:support@khons.brand" className="text-white hover:text-white/70 transition-colors">
+              support@khons.brand
             </a>{" "}
             within 7 days of delivery with a photo and your order number. We will send a replacement or
             full refund at no cost to you.

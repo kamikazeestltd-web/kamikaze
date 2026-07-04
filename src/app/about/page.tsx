@@ -3,80 +3,86 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About — KAMIKAZE",
-  description: "Learn about KAMIKAZE's story, philosophy, and vision. Japanese-inspired luxury streetwear built in Malaysia for the disciplined rebel.",
-  keywords: ["about KAMIKAZE", "brand story", "streetwear philosophy", "Japanese streetwear"],
+  title: "The Cycle — KHONS",
+  description: "Learn about KHONS. Named after Khonsu, the Egyptian moon god who dies and returns every cycle. The story of the moon, the Nile, and rising from the dark.",
+  keywords: ["about KHONS", "Khonsu", "Egyptian mythology", "streetwear philosophy"],
 };
 
 export default function AboutPage() {
   return (
-    <div className="bg-black text-white pt-16">
+    <div className="bg-obsidian text-moon pt-16 min-h-screen">
 
       {/* Hero */}
-      <section className="relative h-[70vh] flex items-end overflow-hidden">
+      <section className="relative h-[70vh] flex items-end overflow-hidden border-b border-line">
         <Image
           src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1600&q=80"
-          alt="KAMIKAZE"
+          alt="KHONS"
           fill
-          className="object-cover opacity-25 grayscale"
+          className="object-cover opacity-20"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/20 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-16 w-full">
-          <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-4">Our Story</p>
+          <p className="text-xs tracking-[0.4em] uppercase text-nile mb-4">The Cycle</p>
           <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none">
-            Rebel With
+            The Moon
             <br />
-            <span className="text-red-600">Discipline.</span>
+            <span className="text-moon-dim">Always Returns.</span>
           </h1>
         </div>
       </section>
 
-      {/* Manifesto */}
+      {/* Story */}
       <section className="max-w-3xl mx-auto px-6 py-24 space-y-8">
-        <p className="text-lg text-white/70 leading-relaxed font-light">
-          KAMIKAZE is inspired by the Japanese spirit of commitment. Not recklessness — discipline. Not chaos — precision.
+        <p className="text-lg text-moon-dim leading-relaxed">
+          In the land of the two Niles, where the sky holds secrets older than empires, they worshipped a god named Khonsu. Not a king. Not a warrior. A traveller.
         </p>
-        <p className="text-lg text-white/40 leading-relaxed">
-          We make luxury streetwear for people who rebel against mediocrity. Every piece is a statement. Every thread has purpose.
+        <p className="text-lg text-moon-dim leading-relaxed">
+          Every night he crossed the dark sky alone, no light to guide him but his own glow. Every night he was swallowed whole — devoured to nothing. And every night he climbed back. Sharper. Fuller. Impossible to kill.
         </p>
-        <p className="text-xl text-white font-black tracking-wide uppercase border-l-4 border-red-600 pl-6">
-          Discipline is the rebellion.
+        <p className="text-xl text-moon font-black tracking-wide uppercase border-l-4 border-nile pl-6">
+          The moon always returns.
         </p>
       </section>
 
-      {/* Values */}
-      <section className="border-t border-white/5 py-24 px-6">
+      {/* Three Faces */}
+      <section className="border-t border-line py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.4em] uppercase text-white/20 mb-16 text-center">
-            What We Stand For
+          <p className="text-xs tracking-[0.4em] uppercase text-nile mb-16 text-center">
+            The Three Faces
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-line">
             {[
               {
-                number: "01",
-                title: "Quality First",
-                body: "We source premium materials and refuse to compromise on construction. If it doesn't meet our standard, it doesn't exist.",
+                num: "I",
+                title: "Rise",
+                sub: "The Traveller",
+                body: "He crosses the night sky without stopping — no light to guide him but his own. For everyone who keeps moving through the dark when there's nothing yet to show for it.",
               },
               {
-                number: "02",
-                title: "Intentional Design",
-                body: "Every silhouette, every detail, every colorway is deliberate. Nothing is accidental. Nothing is wasted.",
+                num: "II",
+                title: "Rule",
+                sub: "The Devourer",
+                body: "In the oldest texts he strangles the old gods so the king may take their power. Defiance with teeth. You don't ask for the throne — you take what was always yours.",
               },
               {
-                number: "03",
-                title: "Built to Last",
-                body: "We don't follow trends. We create pieces that outlast the cycle and become part of your identity.",
+                num: "III",
+                title: "Return",
+                sub: "The Moon",
+                body: "Devoured to nothing every cycle. Back to full every time. Impossible to keep buried. The whole story in one law of the sky: the moon always returns.",
               },
             ].map((v) => (
-              <div key={v.title} className="bg-black p-10">
-                <p className="text-[10px] tracking-[0.3em] uppercase text-white/20 mb-6">
-                  {v.number}
+              <div key={v.title} className="bg-obsidian p-10">
+                <p className="text-xs tracking-[0.3em] uppercase text-nile mb-6">
+                  {v.num}
                 </p>
-                <h3 className="text-lg font-black uppercase tracking-tighter mb-4">
+                <h3 className="text-lg font-black uppercase tracking-tighter mb-2">
                   {v.title}
                 </h3>
-                <p className="text-xs text-white/30 leading-relaxed">
+                <p className="text-sm text-gold italic mb-4">
+                  {v.sub}
+                </p>
+                <p className="text-xs text-moon-dim leading-relaxed">
                   {v.body}
                 </p>
               </div>
@@ -85,44 +91,43 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Inspirations */}
-      <section className="border-t border-white/5 py-24 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      {/* Vision */}
+      <section className="border-t border-line py-24 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="text-[10px] tracking-[0.4em] uppercase text-white/20 mb-6">Vision</p>
+            <p className="text-xs tracking-[0.4em] uppercase text-nile mb-6">Vision</p>
             <h2 className="text-4xl font-black uppercase tracking-tighter mb-8">
-              The Biggest
-              <br />Streetwear Brand
-              <br /><span className="text-white/20">In Southeast Asia.</span>
+              Built For The
+              <br /><span className="text-nile">Ones Who Return</span>
             </h2>
-            <p className="text-sm text-white/30 leading-relaxed">
-              We&apos;re not building a clothing company. We&apos;re building a
-              movement. A culture. A signal that Malaysia has something to say
-              to the world of fashion.
+            <p className="text-sm text-moon-dim leading-relaxed">
+              KHONS is not a fashion brand. It's a mark. A signal that you were buried and came back. That you were devoured and returned sharper. That the dark could not hold you.
+            </p>
+            <p className="text-sm text-moon-dim leading-relaxed mt-6">
+              We are building more than clothing. We are building a cycle. A movement. A community of people who refuse to stay in the dark.
             </p>
           </div>
-          <div className="relative aspect-square overflow-hidden">
+          <div className="relative aspect-square overflow-hidden border border-line">
             <Image
               src="https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=800&q=80"
-              alt="KAMIKAZE vision"
+              alt="KHONS vision"
               fill
-              className="object-cover grayscale opacity-60"
+              className="object-cover grayscale opacity-60 hover:opacity-100 transition-opacity duration-500"
             />
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="border-t border-white/5 py-32 px-6 text-center">
-        <h2 className="text-4xl font-black uppercase tracking-tighter mb-8">
-          Ready To Leave
-          <br />Your Mark?
+      <section className="border-t border-line py-32 px-6 text-center">
+        <h2 className="text-4xl font-black uppercase tracking-tighter mb-8 text-moon">
+          Ready To Rise?
         </h2>
         <Link
           href="/shop"
-          className="inline-block bg-white text-black px-12 py-4 text-xs tracking-[0.3em] uppercase font-black hover:bg-white/90 transition-all"
+          className="inline-block bg-nile text-obsidian px-12 py-4 text-xs tracking-[0.3em] uppercase font-black hover:bg-nile/90 transition-all"
         >
-          Shop The Collection
+          Enter The Cycle
         </Link>
       </section>
 

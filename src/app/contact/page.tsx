@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact & FAQ — KAMIKAZE",
+  title: "Contact — KHONS — KAMIKAZE",
   description: "Got questions? Contact KAMIKAZE support or check our FAQ for shipping, returns, sizing, and ordering.",
   keywords: ["contact KAMIKAZE", "FAQ", "shipping info", "returns policy", "customer support"],
 };
@@ -22,11 +22,11 @@ export default function ContactPage() {
     },
     {
       q: "How do I start a return or exchange?",
-      a: "Email us at support@kamikazebrand.com with your order number and reason. We will respond within 24–48 hours with instructions.",
+      a: "Email us at support@khons.brand with your order number and reason. We will respond within 24–48 hours with instructions.",
     },
     {
       q: "My order hasn't arrived — what do I do?",
-      a: "Check your tracking link first. If there's no movement after 7 business days, email us at support@kamikazebrand.com with your order number and we'll investigate immediately.",
+      a: "Check your tracking link first. If there's no movement after 7 business days, email us at support@khons.brand with your order number and we'll investigate immediately.",
     },
     {
       q: "Can I change or cancel my order?",
@@ -48,9 +48,9 @@ export default function ContactPage() {
       {/* Header */}
       <div className="border-b border-white/5 px-6 py-16">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-3">Support</p>
+          <p className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-3">The Cycle</p>
           <h1 className="text-5xl md:text-6xl font-black uppercase tracking-tighter">
-            Contact & FAQ
+            Contact — KHONS
           </h1>
         </div>
       </div>
@@ -64,10 +64,10 @@ export default function ContactPage() {
             <div>
               <p className="text-[10px] tracking-[0.3em] uppercase text-white/20 mb-2">Email</p>
               <a
-                href="mailto:support@kamikazebrand.com"
+                href="mailto:support@khons.brand"
                 className="text-sm text-white/60 hover:text-white transition-colors"
               >
-                support@kamikazebrand.com
+                support@khons.brand
               </a>
             </div>
             <div>
@@ -82,8 +82,8 @@ export default function ContactPage() {
               <p className="text-[10px] tracking-[0.3em] uppercase text-white/20 mb-2">Social</p>
               <div className="flex gap-5 mt-1">
                 {[
-                  { label: "Instagram", href: "#" },
-                  { label: "TikTok", href: "#" },
+                  { label: "Instagram", href: "https://instagram.com/khons.stw" },
+                  { label: "TikTok", href: "https://instagram.com/khons.stw" },
                 ].map((s) => (
                   <a
                     key={s.label}

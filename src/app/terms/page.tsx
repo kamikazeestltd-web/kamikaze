@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — KAMIKAZE",
-  description: "KAMIKAZE terms of service. Read our policies for purchasing, shipping, returns, and website usage.",
-  keywords: ["terms of service", "KAMIKAZE", "terms and conditions"],
+  title: "Terms of Service — KHONS",
+  description: "KHONS terms of service. Read our policies for purchasing, shipping, returns, and website usage.",
+  keywords: ["terms of service", "KHONS", "terms and conditions"],
 };
 
 export default function TermsPage() {
@@ -27,7 +27,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-black uppercase tracking-widest mb-4">1. Agreement to Terms</h2>
           <p className="text-white/40 leading-relaxed">
-            By accessing and using KAMIKAZE's website (kamikazeestltd.vercel.app), you accept and agree to be bound by
+            By accessing and using KHONS's website (kamikazeestltd.vercel.app), you accept and agree to be bound by
             these Terms of Service. If you do not agree to these terms, do not use this website.
           </p>
         </section>
@@ -120,7 +120,7 @@ export default function TermsPage() {
           <h2 className="text-lg font-black uppercase tracking-widest mb-4">7. Intellectual Property</h2>
           <p className="text-white/40 leading-relaxed">
             All content on this website — including logos, designs, text, images, and product names — is owned by or licensed
-            to KAMIKAZE and protected by Malaysian and international copyright law. You may not reproduce, distribute, or
+            to KHONS and protected by Malaysian and international copyright law. You may not reproduce, distribute, or
             display this content without written permission.
           </p>
         </section>
@@ -128,7 +128,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-black uppercase tracking-widest mb-4">8. Limitation of Liability</h2>
           <p className="text-white/40 leading-relaxed">
-            To the maximum extent permitted by law, KAMIKAZE shall not be liable for any indirect, incidental, special,
+            To the maximum extent permitted by law, KHONS shall not be liable for any indirect, incidental, special,
             consequential, or punitive damages arising from your use of this site or our products, even if we have been
             advised of the possibility of such damages.
           </p>
@@ -145,7 +145,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-black uppercase tracking-widest mb-4">10. Indemnification</h2>
           <p className="text-white/40 leading-relaxed">
-            You agree to indemnify and hold harmless KAMIKAZE, its owners, and employees from any claims, damages,
+            You agree to indemnify and hold harmless KHONS, its owners, and employees from any claims, damages,
             or losses arising from your use of this site or violation of these terms.
           </p>
         </section>
@@ -169,7 +169,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-black uppercase tracking-widest mb-4">13. Contact</h2>
           <p className="text-white/40 leading-relaxed">
-            For questions about these terms, contact us at: support@kamikazebrand.com
+            For questions about these terms, contact us at: support@khons.brand
           </p>
         </section>
       </div>
