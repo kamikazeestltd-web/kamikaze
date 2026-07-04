@@ -41,7 +41,7 @@ export async function sendOrderConfirmation({
     .join("");
 
   await resend.emails.send({
-    from: "Kamikaze <onboarding@resend.dev>",
+    from: "Khons <onboarding@resend.dev>",
     to,
     subject: `Order Confirmed — #${orderId.slice(-8).toUpperCase()}`,
     html: `
@@ -57,7 +57,7 @@ export async function sendOrderConfirmation({
                 <tr>
                   <td style="padding: 40px; border-bottom: 1px solid #2a2a2a;">
                     <h1 style="margin:0; color:#f5f5f0; font-size:24px; letter-spacing: 0.3em; text-transform: uppercase;">
-                      KAMIKAZE
+                      KHONS
                     </h1>
                   </td>
                 </tr>
@@ -101,8 +101,8 @@ export async function sendOrderConfirmation({
                 <tr>
                   <td style="padding: 32px 40px; border-top: 1px solid #2a2a2a;">
                     <p style="color:#444; font-size:12px; margin:0; line-height:1.6;">
-                      Questions? Contact us at info@kamikazebrand.com<br/>
-                      &copy; ${new Date().getFullYear()} Kamikaze. All rights reserved.
+                      Questions? Contact us at info@khonsbrand.com<br/>
+                      &copy; ${new Date().getFullYear()} Khons. All rights reserved.
                     </p>
                   </td>
                 </tr>

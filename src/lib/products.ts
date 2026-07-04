@@ -3,12 +3,12 @@ import { Product } from "@/types";
 export const products: Product[] = [
   {
     id: "1",
-    slug: "kamikaze-oversized-tee",
-    name: "Kamikaze Oversized Tee",
+    slug: "khons-oversized-tee",
+    name: "Khons Oversized Tee",
     price: 75,
     category: "Tops",
     description:
-      "Premium heavyweight cotton oversized tee. Drop shoulder cut, box fit. A cornerstone of the Kamikaze wardrobe.",
+      "Premium heavyweight cotton oversized tee. Drop shoulder cut, box fit. A cornerstone of the Khons wardrobe.",
     images: [
       "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
       "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=800&q=80",
@@ -38,7 +38,7 @@ export const products: Product[] = [
     price: 320,
     category: "Outerwear",
     description:
-      "Satin bomber with embroidered Kamikaze insignia. Ribbed cuffs and collar. The statement piece.",
+      "Satin bomber with embroidered Khons insignia. Ribbed cuffs and collar. The statement piece.",
     images: [
       "https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=800&q=80",
       "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80",
@@ -68,7 +68,7 @@ export const products: Product[] = [
     price: 90,
     category: "Bottoms",
     description:
-      "Relaxed athletic shorts with raw hem detail and woven Kamikaze label. Lightweight and breathable.",
+      "Relaxed athletic shorts with raw hem detail and woven Khons label. Lightweight and breathable.",
     images: [
       "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=800&q=80",
     ],
@@ -82,7 +82,7 @@ export const products: Product[] = [
     price: 55,
     category: "Accessories",
     description:
-      "6-panel structured cap with tonal Kamikaze embroidery. Adjustable strap closure.",
+      "6-panel structured cap with tonal Khons embroidery. Adjustable strap closure.",
     images: [
       "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80",
     ],

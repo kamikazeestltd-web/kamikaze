@@ -11,9 +11,9 @@ export async function POST(req: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   const { data, error } = await resend.emails.send({
-    from: "Kamikaze <onboarding@resend.dev>",
+    from: "Khons <onboarding@resend.dev>",
     to: email,
-    subject: "You're In The Order — KAMIKAZE",
+    subject: "You're In The Order — KHONS",
     html: `
       <!DOCTYPE html>
       <html>
@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
                   <td style="padding: 50px 40px 30px; border-bottom: 1px solid #1a1a1a; text-align: center;">
                     <p style="margin:0 0 12px; color:#cc0000; font-size:32px; letter-spacing: 0.3em;">神風</p>
                     <h1 style="margin:0; color:#ffffff; font-size:22px; letter-spacing: 0.4em; text-transform: uppercase; font-weight: 900;">
-                      KAMIKAZE
+                      KHONS
                     </h1>
                   </td>
                 </tr>
@@ -58,7 +58,7 @@ export async function POST(req: NextRequest) {
                     <p style="color:#333; font-size:11px; margin:0; line-height:1.8; letter-spacing:0.05em;">
                       Luxury streetwear for the disciplined rebel.<br/>
                       Malaysia &mdash; Est. 2024<br/><br/>
-                      &copy; ${new Date().getFullYear()} KAMIKAZE. All rights reserved.
+                      &copy; ${new Date().getFullYear()} KHONS. All rights reserved.
                     </p>
                   </td>
                 </tr>

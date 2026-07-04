@@ -81,7 +81,7 @@ export default function Footer() {
 
       <div className="border-t border-white/5 px-6 py-6 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-[10px] text-white/15 tracking-widest uppercase">
-          © {new Date().getFullYear()} KAMIKAZE. All Rights Reserved.
+          © {new Date().getFullYear()} KHONS. All Rights Reserved.
         </p>
         <p className="text-[10px] text-white/15 tracking-widest uppercase">
           Malaysia

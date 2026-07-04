@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCartStore } from "@/store/cart";
 import { ShoppingBag, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import KhonsMark from "@/components/ui/KhonsMark";
 
 const links = [
   { href: "/shop", label: "Shop" },
@@ -27,17 +28,17 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-black/95 backdrop-blur-md border-b border-white/5"
+            ? "bg-obsidian/95 backdrop-blur-md border-b border-line"
             : "bg-transparent"
         }`}
       >
         <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
-          <Link
-            href="/"
-            className="text-lg font-black tracking-[0.3em] uppercase"
-          >
-            KAMIKAZE
+          <Link href="/" className="flex items-center gap-3 group">
+            <KhonsMark size={28} className="text-moon group-hover:text-nile transition-colors" />
+            <span className="text-sm font-black tracking-[0.3em] uppercase text-moon">
+              KHONS
+            </span>
           </Link>
 
           {/* Desktop links */}
@@ -46,7 +47,7 @@ export default function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="text-xs tracking-[0.2em] uppercase text-white/50 hover:text-white transition-colors duration-300"
+                className="text-xs tracking-[0.2em] uppercase text-moon-dim hover:text-moon transition-colors duration-300"
               >
                 {l.label}
               </Link>
@@ -55,15 +56,15 @@ export default function Navbar() {
 
           <div className="flex items-center gap-5">
             <Link href="/cart" className="relative group">
-              <ShoppingBag size={20} className="text-white/70 group-hover:text-white transition-colors" />
+              <ShoppingBag size={20} className="text-moon-dim group-hover:text-nile transition-colors" />
               {count > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 bg-white text-black text-[9px] font-black rounded-full w-4 h-4 flex items-center justify-center">
+                <span className="absolute -top-1.5 -right-1.5 bg-nile text-obsidian text-[9px] font-black rounded-full w-4 h-4 flex items-center justify-center">
                   {count}
                 </span>
               )}
             </Link>
             <button
-              className="md:hidden text-white/70 hover:text-white transition-colors"
+              className="md:hidden text-moon-dim hover:text-nile transition-colors"
               onClick={() => setOpen((v) => !v)}
               aria-label="Toggle menu"
             >
@@ -75,13 +76,13 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`fixed inset-0 z-40 bg-black transition-all duration-500 flex flex-col justify-center px-8 ${
+        className={`fixed inset-0 z-40 bg-obsidian transition-all duration-500 flex flex-col justify-center px-8 ${
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
         <button
           onClick={() => setOpen(false)}
-          className="absolute top-5 right-6 text-white/50 hover:text-white"
+          className="absolute top-5 right-6 text-moon-faint hover:text-nile"
         >
           <X size={24} />
         </button>
@@ -91,7 +92,7 @@ export default function Navbar() {
               <Link
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="block text-4xl font-black uppercase tracking-widest text-white/30 hover:text-white transition-colors duration-300"
+                className="block text-4xl font-black uppercase tracking-widest text-moon-dim hover:text-nile transition-colors duration-300"
               >
                 {l.label}
               </Link>
@@ -100,13 +101,13 @@ export default function Navbar() {
           <Link
             href="/cart"
             onClick={() => setOpen(false)}
-            className="block text-4xl font-black uppercase tracking-widest text-white/30 hover:text-white transition-colors duration-300"
+            className="block text-4xl font-black uppercase tracking-widest text-moon-dim hover:text-nile transition-colors duration-300"
           >
             Cart {count > 0 && `(${count})`}
           </Link>
         </div>
-        <p className="absolute bottom-12 left-8 text-xs tracking-[0.3em] uppercase text-white/20">
-          Built To Leave A Mark.
+        <p className="absolute bottom-12 left-8 text-xs tracking-[0.3em] uppercase text-moon-faint">
+          The moon always returns.
         </p>
       </div>
     </>

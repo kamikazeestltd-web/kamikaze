@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sizing — KHONS — KAMIKAZE",
-  description: "Find your perfect size. KAMIKAZE size guide with measurement tables for tops, bottoms, and how to measure yourself.",
-  keywords: ["size guide", "KAMIKAZE sizing", "clothing measurements", "how to measure"],
+  title: "Sizing — KHONS — KHONS",
+  description: "Find your perfect size. KHONS size guide with measurement tables for tops, bottoms, and how to measure yourself.",
+  keywords: ["size guide", "KHONS sizing", "clothing measurements", "how to measure"],
 };
 
 export default function SizeGuidePage() {
@@ -47,7 +47,7 @@ export default function SizeGuidePage() {
         <div className="border border-red-600/30 p-6">
           <p className="text-[10px] tracking-[0.3em] uppercase text-red-600 mb-3">Fit Note</p>
           <p className="text-sm text-white/50 leading-relaxed">
-            KAMIKAZE pieces are cut with an intentional oversized silhouette. If you prefer a closer fit,
+            KHONS pieces are cut with an intentional oversized silhouette. If you prefer a closer fit,
             size down by one. All measurements are in centimetres (cm) and represent body measurements, not garment measurements.
           </p>
         </div>
@@ -134,7 +134,7 @@ export default function SizeGuidePage() {
             Email us your measurements and the piece you want — we'll tell you exactly which size to get.
           </p>
           <a
-            href="mailto:support@kamikazebrand.com"
+            href="mailto:support@khonsbrand.com"
             className="inline-block border border-white/20 px-8 py-3 text-xs tracking-[0.3em] uppercase text-white/50 hover:border-white/50 hover:text-white transition-all"
           >
             Ask Us

@@ -27,7 +27,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-lg font-black uppercase tracking-widest mb-4">1. Introduction</h2>
           <p className="text-white/40 leading-relaxed">
-            KHONS ("we," "us," "our," or "Company") operates the website kamikazeestltd.vercel.app.
+            KHONS ("we," "us," "our," or "Company") operates the website khonsestltd.vercel.app.
             This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
           </p>
         </section>

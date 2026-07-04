@@ -27,7 +27,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-black uppercase tracking-widest mb-4">1. Agreement to Terms</h2>
           <p className="text-white/40 leading-relaxed">
-            By accessing and using KHONS's website (kamikazeestltd.vercel.app), you accept and agree to be bound by
+            By accessing and using KHONS's website (khonsestltd.vercel.app), you accept and agree to be bound by
             these Terms of Service. If you do not agree to these terms, do not use this website.
           </p>
         </section>

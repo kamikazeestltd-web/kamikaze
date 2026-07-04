@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Shipping Shipping & Returns Returns — KHONS — KAMIKAZE",
-  description: "KAMIKAZE shipping rates, delivery times, and returns policy. Free shipping on orders over RM200.",
-  keywords: ["shipping KAMIKAZE", "returns policy", "delivery times", "refunds"],
+  title: "Shipping Shipping & Returns Returns — KHONS — KHONS",
+  description: "KHONS shipping rates, delivery times, and returns policy. Free shipping on orders over RM200.",
+  keywords: ["shipping KHONS", "returns policy", "delivery times", "refunds"],
 };
 
 export default function ShippingPage() {

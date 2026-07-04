@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact — KHONS — KAMIKAZE",
-  description: "Got questions? Contact KAMIKAZE support or check our FAQ for shipping, returns, sizing, and ordering.",
-  keywords: ["contact KAMIKAZE", "FAQ", "shipping info", "returns policy", "customer support"],
+  title: "Contact — KHONS — KHONS",
+  description: "Got questions? Contact KHONS support or check our FAQ for shipping, returns, sizing, and ordering.",
+  keywords: ["contact KHONS", "FAQ", "shipping info", "returns policy", "customer support"],
 };
 
 export default function ContactPage() {
@@ -38,7 +38,7 @@ export default function ContactPage() {
     },
     {
       q: "Are the products limited edition?",
-      a: "Yes. KAMIKAZE operates on a drop model — each collection is produced in limited quantities. Once a piece sells out, it's gone. Join The Order to get early access.",
+      a: "Yes. KHONS operates on a drop model — each collection is produced in limited quantities. Once a piece sells out, it's gone. Join The Order to get early access.",
     },
   ];
 
