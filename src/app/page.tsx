@@ -33,7 +33,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <div className="absolute inset-0 hero-distort">
             <Image
-              src="/hero.jpg.jpeg"
+              src="/hero.jpg"
               alt="KHONS"
               fill
               className="object-cover object-top opacity-30"
@@ -42,7 +42,7 @@ export default function HomePage() {
           </div>
           <div className="absolute inset-0 hero-glitch-red">
             <Image
-              src="/hero.jpg.jpeg"
+              src="/hero.jpg"
               alt=""
               fill
               className="object-cover object-top opacity-[0.06]"
@@ -51,7 +51,7 @@ export default function HomePage() {
           </div>
           <div className="absolute inset-0 hero-glitch-blue">
             <Image
-              src="/hero.jpg.jpeg"
+              src="/hero.jpg"
               alt=""
               fill
               className="object-cover object-top opacity-[0.06]"
@@ -60,7 +60,7 @@ export default function HomePage() {
           </div>
           <div className="absolute inset-0 hero-glitch-slice">
             <Image
-              src="/hero.jpg.jpeg"
+              src="/hero.jpg"
               alt=""
               fill
               className="object-cover object-top opacity-20"
