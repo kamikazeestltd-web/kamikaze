@@ -39,12 +39,12 @@ export default function CountdownTimer() {
         { value: time.seconds, label: "Seconds" },
       ].map((item) => (
         <div key={item.label} className="text-center">
-          <div className="bg-black border border-red-600/50 px-3 py-4 mb-2">
-            <p className="text-2xl md:text-3xl font-black text-white">
+          <div className="bg-obsidian border border-nile/50 px-3 py-4 mb-2">
+            <p className="text-2xl md:text-3xl font-black text-moon">
               {String(item.value).padStart(2, "0")}
             </p>
           </div>
-          <p className="text-[9px] tracking-[0.3em] uppercase text-white/30">
+          <p className="text-[9px] tracking-[0.3em] uppercase text-moon-dim">
             {item.label}
           </p>
         </div>
