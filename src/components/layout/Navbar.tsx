@@ -76,7 +76,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`fixed inset-0 z-40 bg-obsidian transition-all duration-500 flex flex-col justify-center px-8 ${
+        className={`fixed inset-0 z-40 bg-black/95 transition-all duration-500 flex flex-col justify-center px-8 ${
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
